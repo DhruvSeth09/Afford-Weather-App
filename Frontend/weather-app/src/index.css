@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+@layer base {
+  body {
+    @apply dark:bg-gray-900 dark:text-white transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .weather-card {
+    @apply mt-8 p-6 rounded-2xl shadow-2xl backdrop-blur-sm bg-white/70 dark:bg-gray-800/80 border border-white/30 dark:border-gray-700;
+  }
+  
+  .forecast-day {
+    @apply p-3 rounded-xl backdrop-blur-sm bg-white/50 dark:bg-gray-700/50 shadow hover:scale-105 transform transition duration-300 text-center space-y-1 border border-white/20 dark:border-gray-600;
+  }
+  
+  .history-item {
+    @apply cursor-pointer px-4 py-1 bg-gray-300/70 dark:bg-gray-700/70 text-sm rounded-full hover:bg-gray-400 dark:hover:bg-gray-600 transition backdrop-blur-sm;
+  }
+  
+  .search-suggestions {
+    @apply absolute z-20 w-full bg-white/90 dark:bg-gray-700/90 border border-gray-200 dark:border-gray-600 mt-1 rounded-lg shadow-lg backdrop-blur-sm max-h-60 overflow-y-auto;
+  }
+  
+  .suggestion-item {
+    @apply px-4 py-2 hover:bg-blue-100/70 dark:hover:bg-gray-600/70 cursor-pointer border-b border-gray-100 dark:border-gray-600 last:border-0;
+  }
+}
